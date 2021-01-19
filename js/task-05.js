@@ -1,40 +1,27 @@
-let price;
-let userСountry = prompt("Пожалуйста, введите страну доставки!");
+let deliveryCountry = prompt('Пожалуйста укажите желаемую страну доставки').toLowerCase();
+const deliveryPriceChina = 100;
+const deliveryPriceChile = 250;
+const deliveryPriceAustralia = 170;
+const deliveryPriceIndia = 80;
+const deliveryPriceJamaica = 120;
 
-if (userСountry !== null) {
-  userСountry = userСountry.toLowerCase();
-  const normilizedСountry =
-    userСountry.charAt(0).toUpperCase() + userСountry.slice(1);
-
-  switch (userСountry) {
+switch (deliveryCountry) {
     case "китай":
-      price = 100;
-      alert(`Доставка в ${normilizedСountry} будет стоить ${price} кредитов`);
-      break;
-
+        alert(`Доставка в ${deliveryCountry} будет стоить ${deliveryPriceChina} кредитов`);
+        break;
     case "чили":
-      price = 250;
-      alert(`Доставка в ${normilizedСountry} будет стоить ${price} кредитов`);
-      break;
-
+        alert(`Доставка в ${deliveryCountry} будет стоить ${deliveryPriceChile} кредитов`);
+        break;
     case "австралия":
-      price = 170;
-      alert(`Доставка в ${normilizedСountry} будет стоить ${price} кредитов`);
-      break;
-
+        alert(`Доставка в ${deliveryCountry} будет стоить ${deliveryPriceAustralia} кредитов`);
+        break;
     case "индия":
-      price = 80;
-      alert(`Доставка в ${normilizedСountry} будет стоить ${price} кредитов`);
-      break;
-
+        alert(`Доставка в ${deliveryCountry} будет стоить ${deliveryPriceIndia} кредитов`);
+        break;
     case "ямайка":
-      price = 120;
-      alert(`Доставка в ${normilizedСountry} будет стоить ${price} кредитов`);
-      break;
+        alert(`Доставка в ${deliveryCountry} будет стоить ${deliveryPriceJamaica} кредитов`);
+        break;
 
     default:
-      alert("В вашей стране доставка не доступна");
-  }
-} else {
-  alert("Отмена ввода");
+        alert('В вашей стране доставка не доступна');
 }

@@ -7,12 +7,6 @@ let order = prompt("Количество дроидов в заказе?");
 if (order === null) {
   console.log("Отменено пользователем!");
 } else {
-  order = Number(order);
-  const notANumber = Number.isNaN(order);
-
-  if (notANumber) {
-    console.log("Введите число!!!");
-  } else {
     totalPrice = pricePerDroid * order;
     if (totalPrice > credits) {
       console.log("Недостаточно средств на счету!");
@@ -23,4 +17,4 @@ if (order === null) {
       );
     }
   }
-}
+

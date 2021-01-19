@@ -6,6 +6,6 @@ if (password === null) {
   message = "Отменено пользователем!";
 } else if (password === ADMIN_PASSWORD) {
   message = "Добро пожаловать!";
+} else {
+  alert(message);
 }
-
-alert(message);
